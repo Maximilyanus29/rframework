@@ -48,6 +48,7 @@ final class App
             if ($pattern === $request){
                 if (class_exists($route[0])){
                     $controller = new $route[0];
+                    $controller->setRequest(new Request());
 
                     if (method_exists($controller, $route[1])){
                         return $controller->{$route[1]}();

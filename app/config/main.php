@@ -2,7 +2,6 @@
 
 return [
     "currentDatetime" => new DateTime(),
-    "responseFormat" => 'json',
     "db" => [
         "driver" => "postgres",
         "host" => "db",
@@ -12,5 +11,7 @@ return [
     ],
     "routes" => [
         "/" => [MainController::class, "index"],
+        "/all" => [MainController::class, "index"],
+        "/usa" => [MainController::class, "usa"],
     ],
 ];
